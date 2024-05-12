@@ -1,0 +1,70 @@
+{
+    "name": "altv-athena",
+    "version": "5.3.2",
+    "description": "a roleplay framework for alt:V",
+    "author": "stuyk",
+    "type": "module",
+    "scripts": {
+        "[-] Server Deployment Commands (They All Do Different Things)": "",
+        "windows": "node ./scripts/runtime/index.js --start",
+        "linux": "node ./scripts/runtime/index.js --start",
+        "devtest": "node ./scripts/runtime/index.js --start --devtest",
+        "dev": "node ./scripts/runtime/index.js --start --dev",
+        "cdn": "node ./scripts/runtime/index.js --start --cdn",
+        "[-] Updating, Installing, Cleanup": "",
+        "update": "npx altv-pkg d release",
+        "check": "tsc -p ./tsconfig.json | node ./scripts/fileChecker/index.js",
+        "fix": "node ./scripts/doctor/index.js",
+        "[-] Vue WebView Deployment": "",
+        "vue-dev": "node ./scripts/plugins/webview.js && node ./scripts/plugins/files.js && npx vite ./src-webviews --clearScreen=false --host=localhost --port=3000",
+        "[-] Utility": "",
+        "docs": "npx typedoc --options ./src/core/typedoc.json && node ./scripts/documentation/index.js",
+        "fix-natives": "node ./scripts/natives-upgrade/index.js",
+        "test": ""
+    },
+    "devDependencies": {
+        "@altv/types-client": "^3.0.3",
+        "@altv/types-natives": "^1.5.4",
+        "@altv/types-server": "^3.1.1",
+        "@altv/types-shared": "^1.6.6",
+        "@altv/types-webview": "^1.0.7",
+        "@altv/types-worker": "1.0.7",
+        "@babel/types": "^7.17.0",
+        "@swc/cli": "0.1.62",
+        "@swc/core": "1.3.92",
+        "@types/minimatch": "^3.0.5",
+        "@types/node": "^14.6.1",
+        "@types/sockjs": "^0.3.33",
+        "@types/sockjs-client": "^1.5.1",
+        "altv-pkg": "^2.3.1",
+        "fkill": "^8.1.1",
+        "glob": "^10.3.1",
+        "prettier": "^2.6.2",
+        "stylus": "^0.58.1",
+        "typescript": "^5.2.2",
+        "vite": "^4.4.11",
+        "vue": "^3.3.4"
+    },
+    "dependencies": {
+        "@stuyk/ezmongodb": "3.0.1",
+        "@vitejs/plugin-vue": "^4.1.0",
+        "axios": "^1.6.8",
+        "bip39": "^3.1.0",
+        "elliptic": "6.5.4",
+        "njwt": "^2.0.0",
+        "sjcl": "1.0.8",
+        "sockjs": "0.3.21",
+        "sockjs-client": "1.5.2"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "printWidth": 120,
+        "singleQuote": true,
+        "semi": true,
+        "arrowParens": "always",
+        "trailingComma": "all"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}

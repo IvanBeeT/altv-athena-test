@@ -1,0 +1,14 @@
+import './clothing.js';
+import './currency.js';
+import './door.js';
+import './interior.js';
+import './inventory.js';
+import './item.js';
+import './noclip.js';
+import './player.js';
+import './skins.js';
+import './teleport.js';
+import './test.js';
+import './vehicle.js';
+import './utility.js';
+import './weapons.js';
